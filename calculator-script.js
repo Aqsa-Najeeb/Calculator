@@ -258,15 +258,29 @@ let a=0, b=0, operator=0;
 			document.getElementById("zero").addEventListener("click", function() 
 			{
 				if(operator==0)
-				{
-					a = a + "0";
-					document.getElementById("ansDisplay").innerHTML = a;
-				}
-				else
-				{
-					b = b + "0";
-					document.getElementById("ansDisplay").innerHTML = b;
-				}
+					{
+						if(a==0)
+						{
+							a = 0;
+						}
+						else
+						{
+							a = a + "0";
+						}
+						document.getElementById("ansDisplay").innerHTML = a;
+					}
+					else
+					{
+						if(b==0)
+						{
+							b = 0;
+						}
+						else
+						{
+							b = b + "0";
+						}
+						document.getElementById("ansDisplay").innerHTML = b;
+					}
 			});
 			
 			document.getElementById("plus").addEventListener("click", function() 
